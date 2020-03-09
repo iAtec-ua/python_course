@@ -33,4 +33,4 @@ print(f"You want to deposit ${first_deposit} for {years_number} years with {rate
 for year in range(1, int(years_number) + 1):
     interest = float(deposit * rate / 100)
     deposit += interest
-    print(f"After {year} years, your interest will be ${interest} and your deposit will grow up to ${deposit}")
+    print(f"After {year} years, your interest will be ${round(interest, 2)} and your deposit will grow up to ${round(deposit, 2)}")
