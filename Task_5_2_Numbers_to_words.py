@@ -85,7 +85,7 @@ def user_prompt(msg):
                 else:
                     print(
                         f"Ваша цифра:{numbers_for_thousands[number_list[0]]} тисяча{hundreds[number_list[1]]}{decimal_numbers[number_list[2]]}{ordinary_numbers[number_list[3]]}!")
-            elif int(number_list[0]) in range(1, 5):
+            elif int(number_list[0]) in range(2, 5):
                 if int(number_list[-2]) == 1:
                     decimal_list = number_list[-2:]
                     decimals = str("".join(decimal_list))
