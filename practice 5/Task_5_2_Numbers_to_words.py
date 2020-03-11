@@ -1,6 +1,6 @@
 # Script prompts a number from user and prints the number in words
 
-#   Create libraries for all kind of numbers
+# Create libraries for all kind of numbers
 ordinary_numbers = {
     "0": "",
     "1": " один",
@@ -54,12 +54,23 @@ numbers_for_thousands = {
     "4": " чотири"
 }
 
-
+# використання функції гарна ідея
+# Ліпше не використовувати стільки вкладень коду
+# Це погіршує сприймання та збільшує ймовірність появи багів
+# Я додав приклад рішення, який буде використовувати цикл і дозволить скоротити кількість вкладень
+# див (Task_5_2_Example.py)
+# також бажано враховувати обмеження в 120 символів на стрічку
+# це негласне правило щодо форматування коду
 def user_prompt(msg):
+    # логіку щодо отримання даних можна винести в окрему функцію
     prompt_number = input(msg)
     if not prompt_number.isdigit():
         return user_prompt("Вы ввели не число. Введіть число: ")
+
+    # перевірку можна розвернути, і при виконанні умови видавати повідомлення про помилку
+    # це дозволить уникнути зайвого вкладення коду зі стрічок 74 - 116
     if int(prompt_number) in range(1, 9999):
+        # ми не використовуємо цю змінну
         number_length = len(prompt_number)
         number_list = list(prompt_number)
         int_prompt_number = int(prompt_number)
