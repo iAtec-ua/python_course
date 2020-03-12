@@ -72,8 +72,15 @@ for letter, number in max_letter_dict.items():
 print(f"The most common first letter in the text is '{frequent_letter}'.")
 
 # Delete all even words from the text
-# if i in range(words_number):
+given_text_split = given_text.split(" ")
+print(given_text_split)
+for i in given_text_split:
+    if given_text_split.index(i) % 2 == 0:
+        print(given_text_split.index(i))
+        given_text_split.remove(i)
 
+deleted_text = " ".join(given_text_split)
+print(deleted_text)
 
 # Replace the first and last words
 given_text = given_text.split(" ")
