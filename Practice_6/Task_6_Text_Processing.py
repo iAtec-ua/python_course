@@ -70,3 +70,13 @@ for letter, number in max_letter_dict.items():
     if number == maxim_encounters:
         frequent_letter = letter
 print(f"The most common first letter in the text is '{frequent_letter}'.")
+
+# Delete all even words from the text
+# if i in range(words_number):
+
+
+# Replace the first and last words
+given_text = given_text.split(" ")
+given_text[0], given_text[-1] = given_text[-1], given_text[0]
+given_text = " ".join(given_text)
+print(given_text)
