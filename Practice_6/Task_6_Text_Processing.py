@@ -18,15 +18,15 @@ bad_char = [",", ".", "!", "?"]
 # Delete the unwanted characters from the text
 for i in bad_char:
     lowcase_text = lowcase_text.replace(i, "")
-print(lowcase_text)
+# print(lowcase_text)
 
 # Create a list of words
 split_text = lowcase_text.split(" ")
-print(split_text)
+# print(split_text)
 
 # Count the number of words
 words_number = len(split_text)
-print(words_number)
+# print(words_number)
 
 # Prompt a letter from a user
 input_letter = input("Please, enter a letter: ").lower()
@@ -40,7 +40,7 @@ counter = 0
 for i in split_text:
     if i[0] == input_letter:
         counter += 1
-print(counter)
+# print(counter)
 
 # Count the percentage of words, starting with the input letter in the text
 percentage = (counter / words_number) * 100
@@ -48,16 +48,25 @@ print(f"Percentage of words, starting with the input letter in the text is {roun
 
 # Find the shortest word in the text
 shortest_word = min(split_text, key=len)
-print(f"The shortest word in the text is {shortest_word}.")
+print(f"The shortest word in the text is '{shortest_word}'.")
 
 # Find the letter with which the maximum number of words start
+# Create a list of first letters of words in the text
 words_alpha = []
 for i in split_text:
     words_alpha.append(i[0])
-print(words_alpha)
+# print(words_alpha)
 
-max_letter_list = {}
+# Create a dictionary of letters and their number
+max_letter_dict = {}
 for i in alphabet:
-    max_letter_list.update({i: words_alpha.count(i)})
-print(max_letter_list)
+    max_letter_dict.update({i: words_alpha.count(i)})
+# print(max_letter_dict)
 
+# Find the most common first letter
+maxim_encounters = max(max_letter_dict.values())
+frequent_letter = None
+for letter, number in max_letter_dict.items():
+    if number == maxim_encounters:
+        frequent_letter = letter
+print(f"The most common first letter in the text is '{frequent_letter}'.")
