@@ -51,3 +51,13 @@ shortest_word = min(split_text, key=len)
 print(f"The shortest word in the text is {shortest_word}.")
 
 # Find the letter with which the maximum number of words start
+words_alpha = []
+for i in split_text:
+    words_alpha.append(i[0])
+print(words_alpha)
+
+max_letter_list = {}
+for i in alphabet:
+    max_letter_list.update({i: words_alpha.count(i)})
+print(max_letter_list)
+
