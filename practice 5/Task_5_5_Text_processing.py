@@ -9,7 +9,11 @@ given_text = """Sed ut perspiciatis unde omnis iste natus error sit voluptatem a
 
 # все інше чудово, окрім останнього завдання
 lowcase_text = given_text.lower()
+sentences_end = [".", "?", "!"]
+counter = 0
 
+for i in sentences_end:
+    counter
 number_of_sentences = lowcase_text.count(".") + lowcase_text.count("?") + lowcase_text.count("!")
 print(f"Number of sentences in the text is {number_of_sentences}.")
 
