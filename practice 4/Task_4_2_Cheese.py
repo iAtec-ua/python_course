@@ -16,7 +16,7 @@ while True:
         print("You must enter an integer!")
         price = input("Please, enter a number: ")
 
-    # price = price / 1000
+    # price = float(price) / 1000
     # for i in range(50, 1001, 50):
-    #     step_price = i * int(price)
-    #     print(f"The price of {i} grams of the product is ${int(step_price)}.")
+    #     step_price = i * price
+    #     print(f"The price of {i} grams of the product is ${round(step_price, 2)}.")
