@@ -73,6 +73,7 @@ print(f"The most common first letter in the text is '{frequent_letter}'.")
 
 # Delete all even words from the text
 given_text_split = given_text.split(" ")
+print(len(given_text_split))
 
 new_text = []
 # print(given_text_split)
