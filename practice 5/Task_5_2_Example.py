@@ -127,7 +127,7 @@ def getStringNumber(number):
     return output.strip()
 
 # також виводимо через assert повідомлення що щось пішло не так
-number = input("Введіть число від 1 до : 2 147 483 647 ")
+number = input("Введіть число від 1 до 2 147 483 647: ")
 assert int(number), "Ви ввели не число. Введіть число: "
 
 output = getStringNumber(number)  
