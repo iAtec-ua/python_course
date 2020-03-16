@@ -73,19 +73,19 @@ print(f"The most common first letter in the text is '{frequent_letter}'.")
 
 # Delete all even words from the text
 given_text_split = given_text.split(" ")
-print(len(given_text_split))
+# print(len(given_text_split))
 
 new_text = []
 # print(given_text_split)
 for i in given_text_split:
-    if given_text_split.index(i) % 2 == 0:
+    if given_text_split.index(i) % 2 != 0:
         new_text.append(i)
 
 deleted_text = " ".join(new_text)
-print(deleted_text)
+print(len(new_text))
 
 # Replace the first and last words
 given_text = given_text.split(" ")
-given_text[0], given_text[-1] = given_text[-1], given_text[0]
+given_text[0], given_text[-1] = given_text[-1].capitalize(), given_text[0].lower()
 given_text = " ".join(given_text)
 print(given_text)
