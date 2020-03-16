@@ -31,14 +31,13 @@ models = ", ".join(models)
 print(f"Here is the list of available models of {user_brand}: {models}!")
 
 # Print all info about a car by a given model
-# car_by_model = []
-# user_model = input("Please, enter a model to get all information about it: ")
-# for i in cars_dict:
-#    if i["Model"] == user_model:
-#        while i not in car_by_model:
-#            car_by_model.append(i)
-#
-# print(f"Here is the list of available models of {car_by_model}!")
+car_by_model = []
+user_model = input("Please, enter a model to get all information about it: ")
+for i in cars_dict:
+    if i["Model"] == user_model:
+        while i not in car_by_model:
+            car_by_model.append(i)
+            print(f"Brand: {i['Make']}, Model: {i['Model']}, Year: {i['Year']}!")
 
 # Search all models of a brand in a given period of time
 user_brand_2 = input("Please, enter a brand: ")
