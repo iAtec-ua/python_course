@@ -2,14 +2,10 @@
 
 # Create a list of letters in alphabet
 import string
+
 alphabet = list(string.ascii_lowercase)
 
-# Не обов"язково додатковий раз викликати фунцію input
-# можна просто ініціалізувати змінну
-# input_letter = None
-
-# Prompt for user input
-input_letter = input("Please, enter a letter: ").lower()
+input_letter = None
 
 # While input is not a latin letter, keep prompting
 while input_letter not in alphabet:
