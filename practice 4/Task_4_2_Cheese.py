@@ -20,3 +20,4 @@ while True:
     # for i in range(50, 1001, 50):
     #     step_price = i * price
     #     print(f"The price of {i} grams of the product is ${round(step_price, 2)}.")
+с
