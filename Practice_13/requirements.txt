@@ -1,0 +1,7 @@
+# Libraries needed to maintain the application
+
+pymongo
+mongoengine
+colorama
+switchlang
+prettytable
