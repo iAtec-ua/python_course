@@ -27,7 +27,7 @@ class DbInstance(object):
         self.__db_connection = mysql.connector.connect(
             host="127.0.0.1",
             user="root",
-            passwd="CostaRica2017"
+            passwd="***"
         )
 
     # Function creates connection to DB
